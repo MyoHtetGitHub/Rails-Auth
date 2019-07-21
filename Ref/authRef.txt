@@ -17,3 +17,7 @@ In User Model
 //form url
 	<%= form_for(:user, :url => {:controller => 'users', :action => 'create'}) do |f| %>
        <% end %>
+
+       //Change one controller to another controller
+       
+             redirect_to :controller => 'workspaces', :action => 'index' 

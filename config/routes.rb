@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
 
+  get 'workspaces/index'
+  get 'workspaces/show'
+  get 'workspaces/new'
   get 'sessions/new'
   get 'sessions/index'
 root 'home#index'
