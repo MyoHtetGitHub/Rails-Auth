@@ -1,0 +1,19 @@
+Ruby on Rails Auth Note
+//in gem file add 
+   =>gem 'bcrypt', '~> 3.1', '>= 3.1.12'
+     
+Create User Model with column field
+      rails g model User name:string email:string password_digest:string
+     rails db:migrate
+
+In User Model
+   => has_secure_password
+ rails g controller User (index show new)
+
+  <%= link_to "Sign Up", user_path %>
+   Route                              ====>user for localhost:variable may be use for user
+       get 'user', to: 'users#new'
+      	<%= render 'layouts/navbar' %>
+//form url
+	<%= form_for(:user, :url => {:controller => 'users', :action => 'create'}) do |f| %>
+       <% end %>

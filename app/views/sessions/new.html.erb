@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	<%= render 'layouts/navbar' %>
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-6 offset-3">
+			<div class="card">
+				<div class="card card-header">
+					<h5 class="text-center text-danger">Sign In </h5>
+				</div>
+				<div class="card card-body">
+				<!-- 	session for path navbar link and (route get 'session', to: 'sessions#new') -->
+					<%= form_for(:session, url: session_path) do |f| %>
+					<div class="form-group">
+						<p> Email:</br> <%= f.text_field :email, class: 'form-control' %> </p>
+					</div>
+					<div class="form-group">
+						<p> Password:</br> <%= f.password_field :password,  class: 'form-control' %> </p>
+					</div>
+					<div class="form-group">
+						 <%= f.submit "Log in", class: "btn btn-primary" %>
+					</div>
+					<% end %>
+				</div>
+			</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
