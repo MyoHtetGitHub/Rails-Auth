@@ -14,7 +14,14 @@
   </button>
 
    <div class="navbar-light">
-      <%= link_to "Sign In", session_path %> <%= link_to "Sign Up", user_path %>
+     
+       <% if current_user %>
+     <%= current_user.email %>
+     <%= link_to "Logout", logout_path %>
+
+   <% else %>
+    <%= link_to "Sign In", session_path %> <%= link_to "Sign Up", user_path %>
+   <% end %> 
    </div>
 </nav>
 </body>
